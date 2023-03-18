@@ -22,11 +22,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  border: var(--redBox);
+  /* border: var(--redBox); */
+  border: 1px  solid rgba(209, 209, 209, 0.5);
+  border-left: 0;
+  display: inline-block;
+  margin-top: 35px;
+  padding: 0 40px 0 100px;
+  /* background-color: red; */
+  /* background: linear-gradient(to left, var(--forestGreen ) 75%,white); */
+  border-radius: 0 0 10px 0;
+  font-family: var(--forestText);
+  color: white;
+  opacity: 0.9;
 }
 
 p {
   margin: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.9;
 }
 
 {
@@ -42,36 +59,65 @@ body {
   line-height: 1.5;
 }
 
+/* HEADER */
+
 header {
-  border: var(--blueBox);
+  position: relative;
+  /* border: var(--blueBox); */
   color: lightgray;
-  font-family: var(--forestText);
-  background-color: var(--forestGreen) ;
+  background-color: var(--forestGreen);
+  height: 100px;
+  margin-bottom: 2px;
 }
 
-.headBanner div {
-  background-image: url("../images/20220928_john-walton_white-cove_008.jpg");
-  background-repeat: no-repeat;
-  background-color: lightgray;
+nav {
+  /* text-align: right; */
+  float: right;
+  position: absolute;
+  right: 40px;
+  bottom: 20px;
 }
 
 nav ul {
-  text-align: right;
+  /* text-align: right; */
+  border: var(--redBox);
+  /* display: inline-block; */
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 nav ul li {
   display: inline-block;
+  font-size: 25px;
 }
 
-section {}
+
+/* HEAD BANNER */
 .headBanner {
-  border: var(--greenBox);
+  /* border: var(--greenBox); */
+}
+
+.headBanner div {
+  position: relative;
+  background-image: url("../images/20220928_john-walton_white-cove_008.jpg");
+  background-repeat: no-repeat;
+  background-color: lightgray;
+  opacity: 0.6;
+  height: 200px;
 }
 
 .headBanner div h2 {
-  color: black;
+  position: absolute;
+  right: 40px;
+  bottom: 20px;
+  color: white;
+  background-color: rgba(78, 78, 78, 0.3);
+  padding: 10px 20px;
 }
 
+section {}
 
 main {}
 
@@ -84,10 +130,12 @@ main {}
 }
 
 #contact {
-  border: var(--greenBox)
+  border: var(--greenBox);
+  background-color: var(--forestGreen);
 }
 
 #contact ul {
+  /* float: right; */
 
 }
 
@@ -99,8 +147,22 @@ main {}
 
 .pageWrapper {}
 .pageSection {}
-figure {}
-figcaption {}
+figure {
+  position: relative;
+  margin: 10px;
+  border: 2px solid var(--forestGreen);
+}
+
+figcaption {
+position: absolute;
+bottom: 20px;
+z-index: 5;
+/* margin: -6em 0 0; */
+padding: 10px;
+background-color: var(--forestGreen);
+color: white;
+}
+
 .contact {}
 footer {
   /* add date */
