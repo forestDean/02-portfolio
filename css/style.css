@@ -46,6 +46,13 @@ header {
   border: var(--blueBox);
   color: lightgray;
   font-family: var(--forestText);
+  background-color: var(--forestGreen) ;
+}
+
+.headBanner div {
+  background-image: url("../images/20220928_john-walton_white-cove_008.jpg");
+  background-repeat: no-repeat;
+  background-color: lightgray;
 }
 
 nav ul {
