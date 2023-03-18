@@ -1,0 +1,119 @@
+:root{
+  --page-background: silver;
+  --forestGreen: darkolivegreen;
+  --mainColor: silver;
+  --redBox: 1px solid red;
+  --blueBox: 1px solid blue;
+  --greenBox: 1px solid green;
+  --whiteBox:  1px solid white;
+  --cardWidth: 27%;
+  --cardBorder: 2px dotted white;
+  --forestText: 'Solway', sans-serif;
+  --bodyText: 16px 'Lato', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h1 {
+  border: var(--redBox);
+}
+
+p {
+  margin: 0;
+}
+
+{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: var(--bodyText);
+  font-size: 16px;
+  color: darkgrey;
+  line-height: 1.5;
+}
+
+header {
+  border: var(--blueBox);
+  color: lightgray;
+  font-family: var(--forestText);
+}
+
+nav ul {
+  text-align: right;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+section {}
+.headBanner {
+  border: var(--greenBox);
+}
+
+.headBanner div h2 {
+  color: black;
+}
+
+
+main {}
+
+#about {
+  border: var(--redBox);
+}
+
+#projects {
+  border: var(--blueBox)
+}
+
+#contact {
+  border: var(--greenBox)
+}
+
+#contact ul {
+
+}
+
+#contact ul li {
+  display: inline-block;
+}
+
+
+
+.pageWrapper {}
+.pageSection {}
+figure {}
+figcaption {}
+.contact {}
+footer {
+  /* add date */
+}
+
+
+/* RESPONSIVE LAYOUT */
+
+@media only screen and (max-width: 1024px) {
+  .cardColumn {
+      width: 45%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .cardColumn {
+      width: 90%;
+  }
+}
+
+/* add mobile & print for resume */
+
+
