@@ -46,6 +46,7 @@ h2 {
   border-right: 2px solid var(--forestGreen);
   text-align: right;
   padding-right: 20px;
+  color:var(--forestGreen);
   /* position: absolute;
   top: 0;
   bottom: 0; */
@@ -153,7 +154,7 @@ nav ul li {
 section {}
 
 main {
-  margin: 0px 5%;
+  margin: 0px 5% 20px;
   display: grid;
   grid-template-rows: auto auto 100px;
   grid-template-columns: 1fr;
@@ -170,6 +171,8 @@ main {
   padding:20px;
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  flex: 1 auto;
 
 }
 
@@ -226,6 +229,9 @@ color: white;
   /* border: var(--greenBox); */
   background-color: var(--forestGreen);
   grid-area: contact;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   /* padding:20px; */
   /* float: right;
   position: absolute;
@@ -233,21 +239,24 @@ color: white;
   bottom: 20px */
 }
 
+#contact h2 {
+  border-right: 2px solid white;
+  color: white;
+  opacity: 0.9;
+}
+
 #contact ul {
-  float: right; 
-  width: 500px;
+  /* float: right;  */
+  /* width: 300px; */
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  border: var(--whiteBox);
+  justify-content: space-evenly;
+  flex: 1 auto;
+   /* border: var(--whiteBox); */
 }
 
 #contact ul li {
   display: inline-block;
-}
-
-#contact h2 {
-  border-right: 2px solid white;
 }
 
 .contact {}
