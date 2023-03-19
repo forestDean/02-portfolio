@@ -6,6 +6,7 @@
   --blueBox: 1px solid blue;
   --greenBox: 1px solid green;
   --whiteBox:  1px solid white;
+  --greyBox:  1px solid lightgrey;
   --cardWidth: 27%;
   --cardBorder: 2px dotted white;
   --forestText: 'Solway', sans-serif;
@@ -22,18 +23,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  /* border: var(--redBox); */
-  border: 1px  solid rgba(209, 209, 209, 0.5);
+  /* border: 1px  solid rgba(209, 209, 209, 0.5); */
+  position: absolute;
+  bottom: 17px;
   border-left: 0;
   display: inline-block;
-  margin-top: 35px;
-  padding: 0 40px 0 100px;
+  /* margin-top: 35px; */
+  padding: 0 100px;
   /* background-color: red; */
-  /* background: linear-gradient(to left, var(--forestGreen ) 75%,white); */
+  background: linear-gradient(to right, rgb(96, 121, 53),  var(--forestGreen ));
   border-radius: 0 0 10px 0;
   font-family: var(--forestText);
   color: white;
   opacity: 0.9;
+  line-height: 50px;
+}
+
+h2 {
+  float: left;
+  width: 15%;
+  height: 100%;
+  border-right: 2px solid var(--forestGreen);
+  text-align: right;
+  padding-right: 20px;
+  /* position: absolute;
+  top: 0;
+  bottom: 0; */
 }
 
 p {
@@ -74,18 +89,21 @@ nav {
   /* text-align: right; */
   float: right;
   position: absolute;
-  right: 40px;
+  right: 0;
   bottom: 20px;
 }
 
 nav ul {
   /* text-align: right; */
-  border: var(--redBox);
+  /* border: var(--redBox); */
   /* display: inline-block; */
   width: 500px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  background: linear-gradient(to left, rgb(96, 121, 53),  var(--forestGreen ));
+  padding: 0 100px;
+  line-height: 40px;
 }
 
 nav ul li {
@@ -97,6 +115,14 @@ nav ul li {
 /* HEAD BANNER */
 .headBanner {
   /* border: var(--greenBox); */
+  position: relative;
+}
+
+.headBanner img {
+  position: absolute;
+  left: 95px;
+  top: 20px;
+  z-index: 5;
 }
 
 .headBanner div {
@@ -105,48 +131,75 @@ nav ul li {
   background-repeat: no-repeat;
   background-color: lightgray;
   opacity: 0.6;
-  height: 200px;
+  height: 240px;
 }
 
 .headBanner div h2 {
   position: absolute;
-  right: 40px;
+  right: 100px;
   bottom: 20px;
   color: white;
   background-color: rgba(78, 78, 78, 0.3);
   padding: 10px 20px;
+  width: 25%;
+  height: auto;
+  line-height: 30px;
+  border: var(--greenBox);
 }
 
 section {}
 
-main {}
+main {
+  margin: 0px 5%;
+  display: grid;
+  grid-template-rows: 300px auto 100px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "about about"
+  "projects projects"
+  "contact contact"
+}
 
 #about {
+  display: inline;
   border: var(--redBox);
+  grid-area: about;
+  padding:20px;
+
 }
+
+#about h2 {
+  margin-right: 20px;
+}
+
+#about section {
+  float: right;
+  /* padding:20px; */
+}
+
+.aboutText {
+  /* padding-left: 20px; */
+  border: var(--blueBox); 
+  background-color: rgba(255, 0, 0, 0.1);
+
+}
+
+
+
 
 #projects {
-  border: var(--blueBox)
+  border: var(--blueBox);
+  grid-area: projects;
+  padding:20px;
 }
 
-#contact {
-  border: var(--greenBox);
-  background-color: var(--forestGreen);
-}
-
-#contact ul {
-  /* float: right; */
-
-}
-
-#contact ul li {
-  display: inline-block;
-}
 
 
 
 .pageWrapper {}
-.pageSection {}
+
+/* .pageSection { position: relative;} */
+
 figure {
   position: relative;
   margin: 10px;
@@ -163,7 +216,38 @@ background-color: var(--forestGreen);
 color: white;
 }
 
+/* CONTACT */
+
+#contact {
+  /* border: var(--greenBox); */
+  background-color: var(--forestGreen);
+  grid-area: contact;
+  /* padding:20px; */
+  /* float: right;
+  position: absolute;
+  right: 0;
+  bottom: 20px */
+}
+
+#contact ul {
+  float: right; 
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: var(--whiteBox);
+}
+
+#contact ul li {
+  display: inline-block;
+}
+
+#contact h2 {
+  border-right: 2px solid white;
+}
+
 .contact {}
+
 footer {
   /* add date */
 }
