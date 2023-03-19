@@ -29,10 +29,10 @@ h1 {
   border-left: 0;
   display: inline-block;
   /* margin-top: 35px; */
-  padding: 0 95px;
+  padding: 0 100px;
   /* background-color: red; */
   background: linear-gradient(to right, rgb(96, 121, 53),  var(--forestGreen ));
-  /* border-radius: 0 0 10px 0; */
+  border-radius: 0 0 10px 0;
   font-family: var(--forestText);
   color: white;
   opacity: 0.9;
@@ -63,12 +63,12 @@ a {
 }
 
 {
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  padding: 2% 5%;
+  padding: 0;
   font: var(--bodyText);
   font-size: 16px;
   color: darkgrey;
@@ -122,7 +122,7 @@ nav ul li {
 
 .headBanner img {
   position: absolute;
-  left: 6%;
+  left: 95px;
   top: 20px;
   z-index: 5;
 }
@@ -146,7 +146,7 @@ nav ul li {
   width: 25%;
   height: auto;
   line-height: 30px;
-  /* border: var(--greenBox); */
+  border: var(--greenBox);
 }
 
 /* MAIN BODY */
@@ -154,130 +154,63 @@ nav ul li {
 section {}
 
 main {
-  margin: 0;
-  width: 100%;
+  margin: 0px 5% 20px;
   display: grid;
   grid-template-rows: auto auto 100px;
-  grid-template-columns: 100%; /* 90% + margin */
+  grid-template-columns: 1fr;
   grid-template-areas:
-  "about"
-  "projects"
-  "contact"
+  "about about"
+  "projects projects"
+  "contact contact"
 }
-
-/* ABOUT */ 
 
 #about {
   /* display: inline; */
-  border: var(--redBox);
-  padding: 20px; 
-  margin-bottom: 5px;
+  /* border: var(--redBox); */
+  grid-area: about;
+  padding:20px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  grid-area: about;
+  flex: 1 auto;
+
 }
 
-#about > h2 {
+#about h2 {
   margin-right: 20px;
-  /* flex: 15%; */
-  /* grid-area: titleabout; */
 }
 
-#about > article {
-  /* margin-right: 20px; */
-
+#about section {
+  /* float: right; */
+  /* padding:20px; */
 }
 
 .aboutText {
   /* padding-left: 20px; */ 
-  /* background-color: rgba(255, 0, 0, 0.1);  */
-  flex: 80%; 
-  /* display: inline;
-  height: 100px; */
-  /* grid-area: about; */
+  background-color: rgba(255, 0, 0, 0.1);
+
 }
 
-/* PROJECTS */ 
+
+
 
 #projects {
   border: var(--blueBox);
   grid-area: projects;
-  padding: 20px;
-  margin-bottom: 5px;
-  /* background-color: rgba(255, 0, 0, 0.1); */
+  padding:20px;
 }
 
-#projects > h2 {
-  margin-right: 20px;
-}
 
-#projectGrid {
-  width: auto;
-  display: grid;
-  /* min-height: 500px; */
-  height: 70vh;
-  grid-template-rows: auto auto auto ;
-  grid-template-columns: 1fr 1fr; /* 90% + margin */
-  gap: 10px 10px;
-  grid-template-areas:
-  "project1 project1"
-  "project2 project3"
-  "project4 project5"
-}
 
-#projectCard1 {
-grid-area: project1;
-background-image: url(../images/02-portfolio-1.jpg);
-background-repeat: no-repeat;
-background-size: 100%; 
-/* height: 200%; */
-/* background-repeat: no-repeat; */
-}
 
-#projectCard2 {
-  grid-area: project2;
-  background-image: url(../images/02-portfolio-2.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;  
-}
-
-#projectCard3 {
-  grid-area: project3;
-  background-image: url(../images/02-portfolio-2.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%; 
-}
-
-#projectCard4 {
-  grid-area: project4;
-  background-image: url(../images/02-portfolio-2.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%; 
-}
-
-#projectCard5 {
-  grid-area: project5;
-  background-image: url(../images/02-portfolio-2.jpg);
-  background-repeat: no-repeat; 
-  background-size: cover;
-  background-position: center;
-  
-  
-}
-      
 .pageWrapper {}
 
 /* .pageSection { position: relative;} */
 
 figure {
-  /* display: none !important; */
   position: relative;
-  padding: 0;
-  margin: 0;
-  /* margin: 10px; */
+  margin: 10px;
   border: 2px solid var(--forestGreen);
-  cursor: pointer;
 }
 
 figcaption {
@@ -298,32 +231,28 @@ color: white;
   grid-area: contact;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start; 
-  padding: 20px;
+  justify-content: flex-start;
+  /* padding:20px; */
   /* float: right;
   position: absolute;
   right: 0;
   bottom: 20px */
 }
 
-#contact > h2 {
+#contact h2 {
   border-right: 2px solid white;
   color: white;
   opacity: 0.9;
-  /* grid-area: titlecontact; */
 }
 
-#contact > ul {
+#contact ul {
   /* float: right;  */
   /* width: 300px; */
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: flex-start;
   flex: 1 auto;
-  margin-top: 8px;
-  /* border: var(--whiteBox); */
-  /* grid-area: contact; */
+   /* border: var(--whiteBox); */
 }
 
 #contact ul li {
