@@ -11,6 +11,9 @@
   --cardBorder: 2px dotted white;
   --forestText: 'Solway', sans-serif;
   --bodyText: 16px 'Lato', sans-serif;
+  --headerTextPad: 0 6vw;
+  --headerImgPad: 5.75vw;
+  --headerLineHeight: 50px;
 }
 
 * {
@@ -24,19 +27,18 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   /* border: 1px  solid rgba(209, 209, 209, 0.5); */
-  position: absolute;
+  /* position: absolute;
   bottom: 17px;
-  border-left: 0;
-  display: inline-block;
+  display: inline-block; */
   /* margin-top: 35px; */
-  padding: 0 6vw;
+  padding: var(--headerTextPad);
   /* background-color: red; */
   background: linear-gradient(to right, rgb(96, 121, 53),  var(--forestGreen ));
   /* border-radius: 0 0 10px 0; */
   font-family: var(--forestText);
   color: white;
   opacity: 0.9;
-  line-height: 50px;
+  line-height: var(--headerLineHeight);
 }
 
 h2 {
@@ -88,15 +90,21 @@ header {
   color: lightgray;
   background-color: var(--forestGreen);
   height: 100px;
+  width: 100%;
+  padding-bottom: 20px;
   margin-bottom: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 nav {
   /* text-align: right; */
-  float: right;
-  position: absolute;
+  /* float: right; */
+  /* position: absolute;
   right: 0;
-  bottom: 20px;
+  bottom: 20px; */
 }
 
 nav ul {
@@ -108,8 +116,8 @@ nav ul {
   flex-direction: row;
   justify-content: space-around;
   background: linear-gradient(to left, rgb(96, 121, 53),  var(--forestGreen ));
-  padding: 0 6vw;
-  line-height: 40px;
+  padding: var(--headerTextPad);
+  line-height: var(--headerLineHeight);
 }
 
 nav ul li {
@@ -127,7 +135,7 @@ nav ul li {
 
 .headBanner img {
   position: absolute;
-  left: 6%;
+  left: var(--headerImgPad);
   top: 20px;
   z-index: 5;
 }
@@ -374,21 +382,98 @@ footer {
 /* RESPONSIVE LAYOUT */
 
 @media only screen and (max-width: 1200px) {
-  .cardColumn {
-      width: 45%;
+  :root{
+    --headerTextPad: 0 5vw;
+    --headerImgPad: 4.75vw;
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  .cardColumn {
-      width: 45%;
+  :root{
+    /* --headerTextPad: 0 5vw;
+    --headerImgPad: 4.75vw; */
+    --headerLineHeight: 50px;
   }
+  header {
+    height: 140px;
+    padding: 30px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: stretch;
+    flex: 1 auto;
+  }
+
+  nav ul {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: var(--forestGreen );
+    padding: var(--headerTextPad);
+    line-height: var(--headerLineHeight);
+  }
+
+  #projectGrid {
+    grid-template-rows: 1.5fr 1fr 1fr ;
+  }
+
+  
 }
 
 @media only screen and (max-width: 768px) {
-  .cardColumn {
-      width: 90%;
+  h1{border: var(--whiteBox);}
+  nav{border: var(--blueBox);}
+
+  #about {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
+  
+  #about > h2 {
+    margin:0 0 20px;
+    border-right: 0;
+    border-bottom: 1px solid var(--forestGreen);
+    width: auto;
+    text-align: left; 
+  }
+
+  #projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  #projects > h2 {
+    margin:0 0 20px;
+    border-right: 0;
+    border-bottom: 1px solid var(--forestGreen);
+    width: auto;
+    text-align: left; 
+  }
+
+  #projectGrid {
+    width: auto;
+    display: grid;
+    /* min-height: 500px; */
+    height: 70vh;
+    grid-template-rows: 1fr ;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    grid-template-areas:
+    "project1"
+    "project2"
+    "project3"
+    "project4"
+    "project5" 
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+  h1{border: var(--whiteBox);}
+  nav{border: var(--blueBox);}
 }
 
 /* add mobile & print for resume */
