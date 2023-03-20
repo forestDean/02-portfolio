@@ -48,7 +48,7 @@ h2 {
   border-right: 2px solid var(--forestGreen);
   text-align: right;
   padding-right: 20px;
-  color:var(--forestGreen);
+  color: var(--forestGreen);
   /* position: absolute;
   top: 0;
   bottom: 0; */
@@ -174,12 +174,13 @@ main {
   margin: 0;
   width: 100%;
   display: grid;
-  grid-template-rows: auto auto 100px;
-  grid-template-columns: 100%; /* 90% + margin */
+  grid-template-rows: auto auto 100px 150px;
+  grid-template-columns: 100%;
   grid-template-areas:
   "about"
   "projects"
   "contact"
+  "backTop"
 }
 
 /* ABOUT */ 
@@ -342,6 +343,7 @@ color: darkorange;
   flex-direction: row;
   justify-content: flex-start; 
   padding: 20px;
+  margin-bottom: 5px;
   /* float: right;
   position: absolute;
   right: 0;
@@ -373,6 +375,35 @@ color: darkorange;
 }
 
 .contact {}
+
+#backTop {
+  background-color: var(--forestGreen);
+  grid-area: backTop;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  /* align-items: flex-end; */
+  cursor: pointer;
+  transition: color 0.5s;
+  padding: 20px; 
+  margin-bottom: 30px;
+}
+
+/* MOBILE BACK-TO-TOP */
+
+#backTop > h2 {
+  margin:0;
+  color: white;
+  opacity: 0.9;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  width: auto;
+  text-align: left;
+}
+
+#backTop > h2:hover {
+  color: darkorange;
+}
 
 footer {
   /* add date */
@@ -476,7 +507,7 @@ footer {
   }
   
   #contact > h2 {
-    margin:0 0 20px;
+    margin:0 0 10px;
     border-right: 0;
     border-bottom: 1px solid white;
     width: auto;
@@ -487,10 +518,17 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: flex-start;
+    align-items:stretch;
     gap: 20px;
     flex: 1 auto;
     margin: 10px 0 40px;
+  }
+
+  #contact ul li {
+    /* display: inline-block; */
+    /* border: var(--whiteBox); */
+    line-height: 60px;
+    border-bottom: 1px solid white;
   }
 
 }
