@@ -574,7 +574,7 @@ footer {
       text-align: left;
       line-height: 30px;
       mix-blend-mode: screen;
-      display: none;
+      display:inline-block;
     }
 
     header {
@@ -593,6 +593,21 @@ footer {
       padding-right: 20px;
     }
 
+    nav ul {
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    nav ul li{
+      line-height: 60px;
+      border-bottom: 1px solid white;
+    }
+
+    nav ul li:last-child{
+      border-bottom: 0;
+    }
 }
 
 /* add mobile & print for resume */
