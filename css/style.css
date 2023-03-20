@@ -435,6 +435,11 @@ footer {
     flex: 1 auto;
   }
 
+  #burger {
+    display: none;
+    z-index: 6;
+  }
+
   nav ul {
     width: auto;
     display: flex;
@@ -531,6 +536,14 @@ footer {
     border-bottom: 1px solid white;
   }
 
+
+}
+
+@media only screen and (max-width: 480px) {
+  nav{border: var(--whiteBox);}
+  h1{border: var(--whiteBox);}
+
+  
   #backTop {
     display: flex;
   }
@@ -545,14 +558,41 @@ footer {
     padding: 5px 15px;
     background-color: rgba(85, 107, 47, 0.5);
     color: white;
-    /* width: 70vw; */
     }
 
-}
+    .headBanner div h2 {
+      position: absolute;
+      right: 0;
+      bottom: 20px;
+      color: black;
+      font-size: 30px;
+      font-weight: bold;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 10px 30px;
+      width: 25%;
+      height: auto;
+      text-align: left;
+      line-height: 30px;
+      mix-blend-mode: screen;
+      display: none;
+    }
 
-@media only screen and (max-width: 480px) {
-  h1{border: var(--whiteBox);}
-  nav{border: var(--blueBox);}
+    header {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      gap: 5px;
+    }
+  
+    #burger {
+      display:inline-block;
+      border: var(--redBox);
+      width: auto;
+      align-self: flex-end;
+      padding-right: 20px;
+    }
+
 }
 
 /* add mobile & print for resume */
