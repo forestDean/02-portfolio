@@ -376,10 +376,12 @@ color: darkorange;
 
 .contact {}
 
+/* MOBILE BACK-TO-TOP */
+
 #backTop {
   background-color: var(--forestGreen);
   grid-area: backTop;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: flex-start; 
   /* align-items: flex-end; */
@@ -388,8 +390,6 @@ color: darkorange;
   padding: 20px; 
   margin-bottom: 30px;
 }
-
-/* MOBILE BACK-TO-TOP */
 
 #backTop > h2 {
   margin:0;
@@ -530,6 +530,23 @@ footer {
     line-height: 60px;
     border-bottom: 1px solid white;
   }
+
+  #backTop {
+    display: flex;
+  }
+  #projectGrid {
+    height: 100vh;
+  }
+
+  figcaption {
+    position: absolute;
+    inset: auto 0 0;
+    z-index: 5;
+    padding: 5px 15px;
+    background-color: rgba(85, 107, 47, 0.5);
+    color: white;
+    /* width: 70vw; */
+    }
 
 }
 
