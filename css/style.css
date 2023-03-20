@@ -422,9 +422,6 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-  h1{border: var(--whiteBox);}
-  nav{border: var(--blueBox);}
-
   #about {
     display: flex;
     flex-direction: column;
@@ -451,14 +448,13 @@ footer {
     border-bottom: 1px solid var(--forestGreen);
     width: auto;
     text-align: left; 
+    height:auto; 
   }
 
   #projectGrid {
-    width: auto;
     display: grid;
-    /* min-height: 500px; */
-    height: 70vh;
-    grid-template-rows: 1fr ;
+    height: 80vh;
+    grid-template-rows: repeat(5, 1fr);
     grid-template-columns: 1fr;
     gap: 10px;
     grid-template-areas:
@@ -467,6 +463,34 @@ footer {
     "project3"
     "project4"
     "project5" 
+  }
+
+  main {
+    grid-template-rows: auto auto auto;
+  }
+
+  #contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  #contact > h2 {
+    margin:0 0 20px;
+    border-right: 0;
+    border-bottom: 1px solid white;
+    width: auto;
+    text-align: left; 
+  }
+
+  #contact > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1 auto;
+    margin: 10px 0 40px;
   }
 
 }
