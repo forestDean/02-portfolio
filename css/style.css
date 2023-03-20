@@ -29,7 +29,7 @@ h1 {
   border-left: 0;
   display: inline-block;
   /* margin-top: 35px; */
-  padding: 0 95px;
+  padding: 0 6vw;
   /* background-color: red; */
   background: linear-gradient(to right, rgb(96, 121, 53),  var(--forestGreen ));
   /* border-radius: 0 0 10px 0; */
@@ -53,13 +53,18 @@ h2 {
 }
 
 p {
-  margin: 0;
+  margin: 0 0 5px;
+  /* text-indent: 3ch; */
 }
 
 a {
   color: white;
   text-decoration: none;
   opacity: 0.9;
+}
+
+a:hover {
+  color: darkorange;
 }
 
 {
@@ -103,7 +108,7 @@ nav ul {
   flex-direction: row;
   justify-content: space-around;
   background: linear-gradient(to left, rgb(96, 121, 53),  var(--forestGreen ));
-  padding: 0 100px;
+  padding: 0 6vw;
   line-height: 40px;
 }
 
@@ -138,14 +143,18 @@ nav ul li {
 
 .headBanner div h2 {
   position: absolute;
-  right: 100px;
+  right: 0;
   bottom: 20px;
-  color: white;
-  background-color: rgba(78, 78, 78, 0.3);
-  padding: 10px 20px;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 30px;
   width: 25%;
   height: auto;
+  text-align: left;
   line-height: 30px;
+  mix-blend-mode: screen;
   /* border: var(--greenBox); */
 }
 
@@ -217,7 +226,7 @@ main {
   display: grid;
   /* min-height: 500px; */
   height: 70vh;
-  grid-template-rows: auto auto auto ;
+  grid-template-rows: 2fr 1fr 1fr ;
   grid-template-columns: 1fr 1fr; /* 90% + margin */
   gap: 10px 10px;
   grid-template-areas:
@@ -278,6 +287,18 @@ figure {
   /* margin: 10px; */
   border: 2px solid var(--forestGreen);
   cursor: pointer;
+  transition: opacity 0.5s;
+}
+
+figure:hover {
+  opacity: 0.9;
+}
+
+.fillFig {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
 }
 
 figcaption {
@@ -285,10 +306,23 @@ position: absolute;
 bottom: 20px;
 z-index: 5;
 /* margin: -6em 0 0; */
-padding: 10px;
+padding: 5px 15px;
 background-color: var(--forestGreen);
 color: white;
+min-width: 200px;
 }
+
+figcaption p:nth-child(1) {
+  /* font-weight: bold; */
+  font-size: 18px;
+  margin: 0;
+  }
+
+figcaption p:nth-child(2) {
+color: darkorange;
+}
+
+
 
 /* CONTACT */
 
@@ -338,6 +372,12 @@ footer {
 
 
 /* RESPONSIVE LAYOUT */
+
+@media only screen and (max-width: 1200px) {
+  .cardColumn {
+      width: 45%;
+  }
+}
 
 @media only screen and (max-width: 1024px) {
   .cardColumn {
