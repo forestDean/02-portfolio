@@ -379,6 +379,7 @@ color: darkorange;
 /* MOBILE BACK-TO-TOP */
 
 #backTop {
+  position: relative;
   background-color: var(--forestGreen);
   grid-area: backTop;
   display: none;
@@ -389,6 +390,11 @@ color: darkorange;
   transition: color 0.5s;
   padding: 20px; 
   margin-bottom: 30px;
+  text-decoration: none;
+  /* reset default button styling */
+  font-size: inherit;
+  border: none;
+  outline: none;
 }
 
 #backTop > h2 {
@@ -397,8 +403,10 @@ color: darkorange;
   opacity: 0.9;
   border-bottom: 1px solid white;
   border-right: 1px solid white;
-  width: auto;
+  padding: 0;
+  width: 100%;
   text-align: left;
+  line-height: 40px;
 }
 
 #backTop > h2:hover {
@@ -545,7 +553,7 @@ footer {
 
   
   #backTop {
-    display: flex;
+    display: inline-flex;
   }
   #projectGrid {
     height: 100vh;
