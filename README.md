@@ -17,7 +17,7 @@ n/a
 	
 A live published page can be found at: https://forestdean.github.io/02-portfolio/ 
 
-Navigation links take the user to the corresponding section and Projects are displayed as `null` placeholder image links.<br>When the page is resized the layout will respond at the 992px, 768px and 576px breakpoints.
+Navigation links take the user to the corresponding section and Projects are displayed as `null` placeholder image links. When the page is resized the layout will respond at the 992px, 768px and 576px breakpoints.
 
 For the mobile layout, a placeholder 'hamburger' icon has been postioned at the top of the screen. A JavaScript `onClick` function will be installed to reveal the menu with a transition.
 	
