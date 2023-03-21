@@ -616,6 +616,10 @@ footer {
     nav ul li:last-child{
       border-bottom: 0;
     }
+
+    body {
+      padding: 2%;
+    }
 }
 
 /* add mobile & print for resume */
