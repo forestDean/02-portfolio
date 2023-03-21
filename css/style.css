@@ -26,15 +26,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  /* border: 1px  solid rgba(209, 209, 209, 0.5); */
-  /* position: absolute;
-  bottom: 17px;
-  display: inline-block; */
-  /* margin-top: 35px; */
   padding: var(--headerTextPad);
-  /* background-color: red; */
   background: linear-gradient(to right, rgb(96, 121, 53),  var(--forestGreen ));
-  /* border-radius: 0 0 10px 0; */
   font-family: var(--forestText);
   color: white;
   opacity: 0.9;
@@ -49,14 +42,10 @@ h2 {
   text-align: right;
   padding-right: 20px;
   color: var(--forestGreen);
-  /* position: absolute;
-  top: 0;
-  bottom: 0; */
 }
 
 p {
   margin: 0 0 5px;
-  /* text-indent: 3ch; */
 }
 
 a {
@@ -86,7 +75,6 @@ body {
 
 header {
   position: relative;
-  /* border: var(--blueBox); */
   color: lightgray;
   background-color: var(--forestGreen);
   height: 100px;
@@ -104,18 +92,9 @@ header {
   z-index: 6;
 }
 
-nav {
-  /* text-align: right; */
-  /* float: right; */
-  /* position: absolute;
-  right: 0;
-  bottom: 20px; */
-}
+nav {}
 
 nav ul {
-  /* text-align: right; */
-  /* border: var(--redBox); */
-  /* display: inline-block; */
   width: 500px;
   display: flex;
   flex-direction: row;
@@ -130,10 +109,9 @@ nav ul li {
   font-size: 25px;
 }
 
-
 /* HEAD BANNER */
+
 .headBanner {
-  /* border: var(--greenBox); */
   position: relative;
   margin-bottom: 10px;
 }
@@ -170,7 +148,6 @@ nav ul li {
   text-align: left;
   line-height: 30px;
   mix-blend-mode: screen;
-  /* border: var(--greenBox); */
 }
 
 /* MAIN BODY */
@@ -181,7 +158,7 @@ main {
   margin: 0;
   width: 100%;
   display: grid;
-  grid-template-rows: auto auto 100px 150px;
+  grid-template-rows: auto auto 100px 0;
   grid-template-columns: 100%;
   grid-template-areas:
   "about"
@@ -189,12 +166,15 @@ main {
   "contact"
   "backTop"
 }
+     
+.pageWrapper {
+  height: auto;
+}
+
 
 /* ABOUT */ 
 
 #about {
-  /* display: inline; */
-  /* border: var(--redBox); */
   padding: 20px; 
   margin-bottom: 5px;
   display: flex;
@@ -203,34 +183,22 @@ main {
   grid-area: about;
 }
 
-#about > h2 {
+#about h2 {
   margin-right: 20px;
-  /* flex: 15%; */
-  /* grid-area: titleabout; */
 }
 
-#about > article {
-  /* margin-right: 20px; */
-
-}
+#about article {}
 
 .aboutText {
-  /* padding-left: 20px; */ 
-  /* background-color: rgba(255, 0, 0, 0.1);  */
   flex: 80%; 
-  /* display: inline;
-  height: 100px; */
-  /* grid-area: about; */
 }
 
 /* PROJECTS */ 
 
 #projects {
-  /* border: var(--blueBox); */
   grid-area: projects;
   padding: 20px;
   margin-bottom: 5px;
-  /* background-color: rgba(255, 0, 0, 0.1); */
 }
 
 #projects > h2 {
@@ -240,10 +208,9 @@ main {
 #projectGrid {
   width: auto;
   display: grid;
-  /* min-height: 500px; */
   height: 70vh;
   grid-template-rows: 2fr 1fr 1fr ;
-  grid-template-columns: 1fr 1fr; /* 90% + margin */
+  grid-template-columns: 1fr 1fr;
   gap: 10px 10px;
   grid-template-areas:
   "project1 project1"
@@ -289,17 +256,11 @@ background-position: center;
   
   
 }
-      
-.pageWrapper {}
-
-/* .pageSection { position: relative;} */
 
 figure {
-  /* display: none !important; */
   position: relative;
   padding: 0;
   margin: 0;
-  /* margin: 10px; */
   border: 2px solid var(--forestGreen);
   cursor: pointer;
   transition: opacity 0.5s;
@@ -320,16 +281,14 @@ figcaption {
 position: absolute;
 bottom: 20px;
 z-index: 5;
-/* margin: -6em 0 0; */
 padding: 5px 15px;
-background-color: var(--forestGreen);
+background-color: rgba(85, 107, 47, 0.9);
 color: white;
 min-width: 200px;
 }
 
 figcaption p:nth-child(1) {
-  /* font-weight: bold; */
-  font-size: 18px;
+  font-size: 20px;
   margin: 0;
   }
 
@@ -337,12 +296,11 @@ figcaption p:nth-child(2) {
 color: darkorange;
 }
 
-
-
 /* CONTACT */
 
+.contact {}
+
 #contact {
-  /* border: var(--greenBox); */
   background-color: var(--forestGreen);
   grid-area: contact;
   display: flex;
@@ -350,37 +308,27 @@ color: darkorange;
   justify-content: flex-start; 
   padding: 20px;
   margin-bottom: 5px;
-  /* float: right;
-  position: absolute;
-  right: 0;
-  bottom: 20px */
 }
 
 #contact > h2 {
   border-right: 2px solid white;
   color: white;
   opacity: 0.9;
-  /* grid-area: titlecontact; */
 }
 
 #contact > ul {
-  /* float: right;  */
-  /* width: 300px; */
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-start;
   flex: 1 auto;
   margin-top: 8px;
-  /* border: var(--whiteBox); */
-  /* grid-area: contact; */
 }
 
 #contact ul li {
   display: inline-block;
+  font-size: 17px;
 }
-
-.contact {}
 
 /* MOBILE BACK-TO-TOP */
 
@@ -390,14 +338,11 @@ color: darkorange;
   grid-area: backTop;
   display: none;
   flex-direction: column;
-  justify-content: flex-start; 
-  /* align-items: flex-end; */
+  justify-content: flex-end; 
   cursor: pointer;
   transition: color 0.5s;
   padding: 20px; 
-  margin-bottom: 30px;
   text-decoration: none;
-  /* reset default button styling */
   font-size: inherit;
   border: none;
   outline: none;
@@ -423,10 +368,11 @@ color: darkorange;
   color: darkorange;
 }
 
-footer {
-  /* add date */
+footer{
+  width: 100%; 
+  text-align: center;
+  margin-top: 10px;
 }
-
 
 /* RESPONSIVE LAYOUT */
 
@@ -437,10 +383,8 @@ footer {
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 992px) {
   :root{
-    /* --headerTextPad: 0 5vw;
-    --headerImgPad: 4.75vw; */
     --headerLineHeight: 50px;
   }
   header {
@@ -466,11 +410,14 @@ footer {
   #projectGrid {
     grid-template-rows: 1.5fr 1fr 1fr ;
   }
-
   
 }
 
 @media only screen and (max-width: 768px) {
+  main {
+    grid-template-rows: auto auto auto 0;
+  }
+
   #about {
     display: flex;
     flex-direction: column;
@@ -514,17 +461,13 @@ footer {
     "project5" 
   }
 
-  main {
-    grid-template-rows: auto auto auto;
-  }
-
   #contact {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
   }
   
-  #contact > h2 {
+  #contact h2 {
     margin:0 0 10px;
     border-right: 0;
     border-bottom: 1px solid white;
@@ -532,7 +475,7 @@ footer {
     text-align: left; 
   }
 
-  #contact > ul {
+  #contact ul {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -543,17 +486,14 @@ footer {
   }
 
   #contact ul li {
-    /* display: inline-block; */
-    /* border: var(--whiteBox); */
     line-height: 60px;
     border-bottom: 1px solid white;
+    font-size: 18px;
   }
-
 
 }
 
-@media only screen and (max-width: 480px) {
-  
+@media only screen and (max-width: 576px) {
   #burger {
     display: inline-block;
     width: auto;
@@ -566,17 +506,51 @@ footer {
     margin-bottom: 40px;
   }
 
-
-  #backTop {
-    display: inline-flex;
+  body {
+    padding: 2%;
+  }
+  
+  main {
+  grid-template-rows: auto auto auto 100px;
   }
 
-  #backTop ul li {
-    /* display: inline-block;
-    font-size: 25px;
-    color: white; */
+  header {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 5px;
   }
 
+  nav ul {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  nav ul li{
+    line-height: 60px;
+    border-bottom: 1px solid white;
+  }
+
+  nav ul li:last-child{
+    border-bottom: 0;
+  }
+
+  .headBanner div h2 {
+    position: absolute;
+    right: -90px;
+    bottom: 90px;
+    padding: 0;
+    width: 240px;
+    height: auto;
+    text-align: center;
+    line-height: 60px;
+    transform: rotate(-90deg);
+  }
+
+  #webDev {}
   #projectGrid {
     height: 100vh;
   }
@@ -589,53 +563,13 @@ footer {
     background-color: rgba(85, 107, 47, 0.5);
     color: white;
     }
-
-    .headBanner div h2 {
-      position: absolute;
-      right: -90px;
-      bottom: 90px;
-      padding: 0;
-      width: 240px;
-      height: auto;
-      text-align: center;
-      line-height: 60px;
-      transform: rotate(-90deg);
-    }
-
-    #webDev {
-
-    }
-
-    header {
-      height: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      gap: 5px;
-    }
-
-    nav ul {
-      width: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-    }
-
-    nav ul li{
-      line-height: 60px;
-      border-bottom: 1px solid white;
-    }
-
-    nav ul li:last-child{
-      border-bottom: 0;
-    }
-
-    body {
-      padding: 2%;
-    }
+    
+  #backTop {
+    display: inline-flex;
+  }
 
 }
 
-/* add mobile & print for resume */
+/* add @print for resume */
 
 
