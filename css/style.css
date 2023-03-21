@@ -397,7 +397,11 @@ color: darkorange;
   outline: none;
 }
 
-#backTop > h2 {
+#backTop ul {
+  list-style-type: none;
+}
+
+#backTop ul li h2 {
   margin:0;
   color: white;
   opacity: 0.9;
@@ -548,13 +552,16 @@ footer {
 }
 
 @media only screen and (max-width: 480px) {
-  nav{border: var(--whiteBox);}
-  h1{border: var(--whiteBox);}
-
-  
   #backTop {
     display: inline-flex;
   }
+
+  #backTop ul li {
+    /* display: inline-block;
+    font-size: 25px;
+    color: white; */
+  }
+
   #projectGrid {
     height: 100vh;
   }
@@ -595,7 +602,6 @@ footer {
   
     #burger {
       display:inline-block;
-      border: var(--redBox);
       width: auto;
       align-self: flex-end;
       padding-right: 20px;
@@ -620,6 +626,7 @@ footer {
     body {
       padding: 2%;
     }
+
 }
 
 /* add mobile & print for resume */

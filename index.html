@@ -17,15 +17,16 @@
   <!-- main logo / nav -->
   <header>
     <!-- add flexbox -->
+    <!-- add onClick JavaScript later to show topNav with transition -->
     <div id="burger" class="fillFig">
       <img src="./graphics/menu-hamburger.png " width="30px" height="30px" alt="menu icon">
-      <a href="#mobileMenu"></a>
+      <a href="#topNav"></a>
     </div>
     <div id=flex1>
       <h1>John Walton</h1>
     </div>
     <div id=flex2>  
-      <nav>
+      <nav id=topNav>
         <!-- add flexbox -->
         <ul>
           <li><a href="#about">About</a></li>
@@ -122,10 +123,12 @@
     </section>
 
     <!-- back-to-top -->
-    <!-- add onClick JavaScript later, formaction may be deprecated -->
-    <div class="pageSection" id="backTop">
-      <h2>Back to Top</h2>
-      <a href="#top" class="fillFig"></a>
+    <!-- add onClick JavaScript later -->
+    <div class="pageSection" id="backTop"> 
+      <!-- <a href="#top" class="fillFig"></a> -->
+      <ul>
+        <li><a href="#top"><h2>Back to Top</h2></a></li>
+      </ul>
     </div>
 
   </main>
